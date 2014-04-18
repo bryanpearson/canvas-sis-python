@@ -15,7 +15,7 @@ logging.basicConfig(format='%(asctime)s cron canvas/sis: %(levelname)s %(message
 base_url = '<MY_BASE_URL>' # Example: https://mysubdomain.test.instructure.com/api/v1/accounts/'
 account_id = '<MY_ACCOUNT_ID>' # Example: 12
 header = {'Authorization' : 'Bearer <MY_ACCESS_TOKEN>'}
-sleep_timeout = 60 # Amount of time to wait between checking API for task progress
+sleep_timeout = 60 # In seconds. Amount of time to wait between checking API for task progress
 job_watch_max_counter = 60 # Maximum times to check API for job progress before quitting
 
 
