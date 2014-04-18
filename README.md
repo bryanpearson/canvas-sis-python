@@ -16,10 +16,10 @@ Instructions for installing Requests can be found [here](http://docs.python-requ
 ## Using the Script
 
 ### Set static variables
-This script allows you to both submit an SIS import and check the status of imports that you've already run. Before you can submit an initial request, you'll need to replace the code enclosed in angle brackets with your own data.
+This script allows you to both submit an SIS import and check the status of imports that you've already run. Before you can submit an initial request you'll need to replace the code enclosed in angle brackets with your own data, and adjust sleep timeout and job watch maximums.
 
-    LOGDIR =  '<WRITABLE_LOG_DIRECTORY>' # Example: /var/log/canvas/
-    LOGFILENAME =  '<LOG_FILE_NAME>' # Example: canvas_sis.log
+    logdir =  '<WRITABLE_LOG_DIRECTORY>' # Example: /var/log/canvas/
+    logfilename =  '<LOG_FILE_NAME>' # Example: canvas_sis.log
     
     # 1. Define standard variables
     base_url = '<MY_BASE_URL>' # Example: https://bleh.test.instructure.com/api/v1/accounts/'

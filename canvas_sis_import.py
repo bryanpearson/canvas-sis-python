@@ -5,10 +5,10 @@ import json
 import logging
 import time
 
-LOGDIR =  '<WRITABLE_LOG_DIRECTORY>' # Example: /var/log/canvas/
-LOGFILENAME =  '<LOG_FILE_NAME>' # Example: canvas_sis.log
-TIMESTAMP = time.strftime("%Y%m%d")
-logging.basicConfig(format='%(asctime)s cron canvas/sis: %(levelname)s %(message)s', datefmt='%b %d %H:%M:%S', filename=LOGDIR + LOGFILENAME + TIMESTAMP, level=logging.DEBUG)
+logdir =  '<WRITABLE_LOG_DIRECTORY>' # Example: /var/log/canvas/
+logfilename =  '<LOG_FILE_NAME>' # Example: canvas_sis.log
+timestamp = time.strftime("%Y%m%d")
+logging.basicConfig(format='%(asctime)s cron canvas/sis: %(levelname)s %(message)s', datefmt='%b %d %H:%M:%S', filename=logdir + logfilename + timestamp, level=logging.DEBUG)
 
 
 # 1. Define standard variables
@@ -64,7 +64,7 @@ def main(argv):
       logging.exception(e)
       sys.exit()
   else:
-    print "\nusage: import_csv.py <PATH_TO_CSV_OR_ZIP> <FILE_TYPE (zip/csv)> <LOG_JOB_PROGRESS (true/false)>\n"
+    print "\nusage: canvas_sis_import.py <PATH_TO_CSV_OR_ZIP> <FILE_TYPE (zip/csv)> <LOG_JOB_PROGRESS (true/false)>\n"
 
 if __name__ == "__main__":
   main(sys.argv[1:])
