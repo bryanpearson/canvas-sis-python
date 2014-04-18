@@ -3,6 +3,8 @@ Canvas SIS API integration using Python Requests Library
 
 ## General Information
 
+Relied heavily on the following project for initial structure and assistance: <https://github.com/kajigga/canvas-contrib/tree/master/SIS%20Integration/python_requestlib>
+
 Documentation on the SIS import API itself: <https://canvas.instructure.com/doc/api/sis_imports.html>
 
 Documentation on the required format for the files you import: <https://canvas.instructure.com/doc/api/sis_csv.html>
