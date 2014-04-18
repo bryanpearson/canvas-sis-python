@@ -47,9 +47,11 @@ The script requires 3 arguments.
 Run the script with the three required arguments. Script output will be logged to log file.
 
 *Submit CSV, log job progress*
+
 `python canvas_sis_import.py /my/directory/canvasdata.csv csv true`
 
 *Submit ZIP file, do not log job progress*
+
 `python canvas_sis_import.py /my/directory/canvasdata.zip zip false`
 
 ### Logged information
