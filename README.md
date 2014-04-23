@@ -71,13 +71,13 @@ Run the script with the three required arguments. Script output will be logged t
     Apr 18 06:27:07 cron canvas/sis: INFO Starting new HTTPS connection (1): mydomain.instructure.com
     Apr 18 06:27:10 cron canvas/sis: DEBUG "GET /api/v1/accounts/1/sis_imports/141 HTTP/1.1" 200 189
     Apr 18 06:27:10 cron canvas/sis: INFO Workflow_state state is: 'importing'
-    Apr 18 06:32:14 cron canvas/sis: INFO Slept 3 minutes. Checking job 141 progress now.
-    Apr 18 06:32:14 cron canvas/sis: INFO Starting new HTTPS connection (1): mydomain.instructure.com
-    Apr 18 06:32:15 cron canvas/sis: DEBUG "GET /api/v1/accounts/1/sis_imports/141 HTTP/1.1" 200 321
-    Apr 18 06:32:15 cron canvas/sis: INFO Workflow_state state is: 'imported_with_messages'
-    Apr 18 06:32:15 cron canvas/sis: INFO Canvas API SIS import complete. Logging json from canvas
-    Apr 18 06:32:15 cron canvas/sis: INFO {u'ended_at': u'2014-04-18T13:27:29Z', u'workflow_state': u'imported_with_messages', u'created_at': u'2014-04-18T13:25:05Z', u'updated_at': u'2014-04-18T13:31:29Z', u'processing_warnings': [[u'users.csv', u'Improper status for user 9C4544']], u'progress': 100, u'data': {u'import_type': u'instructure_csv', u'counts': {u'terms': 0, u'users': 3839, u'grade_publishing_results': 0, u'abstract_courses': 0, u'group_memberships': 0, u'courses': 4145, u'accounts': 0, u'xlists': 10, u'groups': 0, u'enrollments': 50, u'sections': 4145}, u'supplied_batches': [u'course', u'section', u'xlist', u'user', u'enrollment']}, u'id': 141}
-    Apr 18 06:32:15 cron canvas/sis: INFO ### CANVAS API SCRIPT FINISHED ###
+    Apr 18 06:28:14 cron canvas/sis: INFO Slept 3 minutes. Checking job 141 progress now.
+    Apr 18 06:28:14 cron canvas/sis: INFO Starting new HTTPS connection (1): mydomain.instructure.com
+    Apr 18 06:28:15 cron canvas/sis: DEBUG "GET /api/v1/accounts/1/sis_imports/141 HTTP/1.1" 200 321
+    Apr 18 06:28:15 cron canvas/sis: INFO Workflow_state state is: 'imported_with_messages'
+    Apr 18 06:28:15 cron canvas/sis: INFO Canvas API SIS import complete. Logging json from canvas
+    Apr 18 06:28:15 cron canvas/sis: INFO {u'ended_at': u'2014-04-18T13:27:29Z', u'workflow_state': u'imported_with_messages', u'created_at': u'2014-04-18T13:25:05Z', u'updated_at': u'2014-04-18T13:31:29Z', u'processing_warnings': [[u'users.csv', u'Improper status for user 9C4544']], u'progress': 100, u'data': {u'import_type': u'instructure_csv', u'counts': {u'terms': 0, u'users': 3839, u'grade_publishing_results': 0, u'abstract_courses': 0, u'group_memberships': 0, u'courses': 4145, u'accounts': 0, u'xlists': 10, u'groups': 0, u'enrollments': 50, u'sections': 4145}, u'supplied_batches': [u'course', u'section', u'xlist', u'user', u'enrollment']}, u'id': 141}
+    Apr 18 06:28:15 cron canvas/sis: INFO ### CANVAS API SCRIPT FINISHED ###
 
 
 
