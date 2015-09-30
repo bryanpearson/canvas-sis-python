@@ -42,6 +42,7 @@ The script requires 1 argument, a full or relative path to file containing Canva
 
 ### Running the script (submit a file to the Canvas API)
 Run the script with the required file argument. Script output will be logged to log file. Example (after updating `watch_job` and `params` as needed):
+
 `python canvas_sis_import.py /my/directory/canvasdata.csv`
 
 
