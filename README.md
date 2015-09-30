@@ -1,25 +1,24 @@
 # canvas-sis-python
 Canvas SIS API integration using Python Requests Library
 
-## General Information
 
+## General Information
 Relied heavily on the following project for initial structure and assistance: <a href="https://github.com/kajigga/canvas-contrib/tree/master/SIS%20Integration/python_requestlib" target="_blank">kajigga/canvas-contrib</a>
 
 Documentation on the SIS import API itself: <https://canvas.instructure.com/doc/api/sis_imports.html>
 
 Documentation on the required format for the files you import: <https://canvas.instructure.com/doc/api/sis_csv.html>
 
-## Requests Library
 
+## Requests Library
 This example makes use of the [Requests](http://docs.python-requests.org/) library, a Python HTTP library "written for human beings". As of this writing, Requests is supported in Python versions 2.6 to 3.3. 
 
 Instructions for installing Requests can be found [here](http://docs.python-requests.org/en/latest/user/install/). If you'd like to learn more about how to use the library itself, take a look at the [Quickstart Guide](http://docs.python-requests.org/en/latest/user/quickstart/).
 
-## Using the Script
 
+## Using the Script
 ### Set static variables
 This script allows you to both submit an SIS import and check the status of imports that you've already run. Before you can submit an initial request you'll need to replace the code enclosed in angle brackets with your own data, adjust sleep timeout and job watch maximums, and set any parameters for your particular setup.
-
 
 * `<WRITABLE_LOG_DIRECTORY>`: Directory where log files should be created/stored
 * `<LOG_FILE_NAME>`: Name of log file to create and update. Example: canvas_sis.log
@@ -29,7 +28,6 @@ This script allows you to both submit an SIS import and check the status of impo
 * `watch_job`: If `True`, the script will call the API and log the status of the import, using `sleep_timeout` and `job_watch_max_counter` values. If `False`, the script stops after it's submitted the files to the Canvas API endpoint.
 * `sleep_timeout`: If `watch_job` `True`, this sets the amount of time to wait between checking API for job progress. Default: 60 seconds.
 * `job_watch_max_counter`: If argument 3 is true, this sets the maximum number of times the script will check the API for job progress. Once `job_watch_max_counter` is reached, script will log event and quit. Default: 60.
-
 * `params['import_type']`: See instructure documentation for the following properties and definitions.
 * `params['extension']`
 * `params['batch_mode']`
@@ -41,15 +39,13 @@ This script allows you to both submit an SIS import and check the status of impo
 ### Script arguments
 The script requires 1 argument, a full or relative path to file containing Canvas data. `csv`, `xml` or `zip` files allowed.
 
+
 ### Running the script (submit a file to the Canvas API)
-Run the script with the required file argument. Script output will be logged to log file.
-
-**Example (after updating )**
-
+Run the script with the required file argument. Script output will be logged to log file. Example (after updating `watch_job` and `params` as needed):
 `python canvas_sis_import.py /my/directory/canvasdata.csv`
 
-### Logging example
 
+### Logging example
     Apr 18 06:25:04 cron canvas/sis: INFO ### CANVAS API SCRIPT STARTED ###
     Apr 18 06:25:04 cron canvas/sis: INFO File argument: /var/canvas_dumps/lms_daily.zip, file type: zip, watch job: true
     Apr 18 06:25:04 cron canvas/sis: INFO Starting new HTTPS connection (1): mydomain.instructure.com
